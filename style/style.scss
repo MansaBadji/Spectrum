@@ -1,0 +1,166 @@
+
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+    header {
+        .presentation {
+            display: grid;
+            grid-template-columns: 30% 70%;
+            height: 580px;
+            background-color: #282828;
+            &__spectrum {
+                div {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    padding: 10px;
+                    margin-right: 40px;
+                    .logo {
+                        width: 200px;
+                        cursor: pointer;
+                    }
+                    .menu {
+                        display: flex;
+                        flex-direction: column;
+                        background-color: #282828;
+                        justify-content: center;
+                        gap: 5px;
+                        padding: 0px;
+                        padding-bottom: 1px;
+                        margin: 0px;
+                        cursor: pointer;
+                    }
+                    .menu p {
+                        background-color: #FFFFFF;
+                        width: 35px;
+                        height: 1.5px;
+                        font-size: .1em;
+                        line-height: 0;
+                    }
+                }
+                h1 {
+                    color: #FFFFFF;
+                    font-size: 3em;
+                    width: fit-content;
+                    margin: 40px auto;
+                }
+                h2 {
+                    font-size: 1em;
+                    color: #C39469;
+                    width: fit-content;
+                    margin: auto;
+                }
+                button {
+                    color: #FFFFFF;
+                    background-color: #282828;
+                    font-size: .8em;
+                    font-weight: 700;
+                    padding: 20px 40px 20px 40px;
+                    border: 1.5px solid #C39469;
+                    margin: 40px 0px 20px 80px;
+                }
+            }
+
+            .slideContainer {
+                width: 100%;
+                height: 100%;
+                .slider {
+                    display: none;
+                    width: 100%;
+                    height: 100%;
+                    background-position: center;
+                }
+                .slider1 {
+                    background-image: url("../images/slider/imgHeader1.jpg");
+                }
+                .slider2 {
+                    background-image: url("../images/slider/imgHeader2.jpg");
+                }
+                .slider3 {
+                    background-image: url("../images/slider/imgHeader3.jpg");
+                }
+
+                /* Fading animation */
+                .fade {
+                    animation-name: fade;
+                    animation-duration: 2000ms;
+                }
+
+                @keyframes fade {
+                    from {opacity: .4}
+                    to {opacity: 1}
+                }
+            }
+        }
+
+        .sliderNav {
+            display: grid;
+            grid-template-columns: 30% 70%;
+            &__arrow {
+                background-color: #313131;
+            }
+            &__arrow div {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                gap: 15px;
+                background-color: #C4956A;
+                width: fit-content;
+                padding: 30px;
+                top: -50%;
+                left: 42%;
+                .fa-solid {
+                    color: #FFFFFF;
+                    font-size: 1.5em;
+                    padding: 20px;
+                    border: 1.5px solid rgba($color: #FFFFFF, $alpha: .7);
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+            }
+
+            &__works {
+                background-color: #282828;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                gap: 100px;
+                padding: 0 20px;
+                h2 {
+                    color: #313131;
+                    font-size: 4em;
+                    font-weight: 800;
+                    margin: 0;
+                }
+                .worksInfos {
+                    display: flex;
+                    gap: 40px;
+                    justify-content: space-between;
+                }
+            }
+            &__works .sliderAdress {
+                color: #FFFFFF;
+                font-size: 1em;
+                font-weight: 800;
+                display: none;
+            }
+            &__works .sliderPrice,
+            &__works .sliderStreet {
+                color: #C39469;
+                font-size: 1em;
+                font-weight: 800;
+                display: none;
+            }
+        }
+    }
+}
