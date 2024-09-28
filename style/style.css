@@ -12,65 +12,125 @@ body {
 body header .presentation {
   display: grid;
   grid-template-columns: 30% 70%;
+  grid-template-rows: 10% 90%;
   height: 580px;
   background-color: #282828;
 }
-body header .presentation__spectrum div {
+@media screen and (max-width: 576px) {
+  body header .presentation {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  body header .presentation {
+    grid-template-columns: 35% 65%;
+    height: 450px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body header .presentation {
+    height: 470px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  body header .presentation {
+    height: 500px;
+  }
+}
+body header .presentation .logoMenu {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 10px;
-  margin-right: 40px;
+  padding-right: 40px;
 }
-body header .presentation__spectrum div .logo {
+@media screen and (max-width: 576px) {
+  body header .presentation .logoMenu {
+    padding: 10px;
+    box-shadow: 6px 0px 25px black;
+    position: sticky;
+    top: 0;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  body header .presentation .logoMenu {
+    grid-column: 1/3;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 6px 0px 25px black;
+    position: sticky;
+    top: 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body header .presentation .logoMenu {
+    grid-column: 1/3;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 6px 0px 25px black;
+    position: sticky;
+    top: 0;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  body header .presentation .logoMenu {
+    grid-column: 1/3;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 6px 0px 25px black;
+    position: sticky;
+    top: 0;
+  }
+}
+body header .presentation .logoMenu__logo {
   width: 200px;
   cursor: pointer;
 }
-body header .presentation__spectrum div .menu {
+body header .presentation .logoMenu__menu {
   display: flex;
   flex-direction: column;
   background-color: #282828;
   justify-content: center;
-  gap: 5px;
+  gap: 3.5px;
   padding: 0px;
   padding-bottom: 1px;
   margin: 0px;
   cursor: pointer;
 }
-body header .presentation__spectrum div .menu p {
+body header .presentation .logoMenu__menu p {
   background-color: #FFFFFF;
-  width: 35px;
+  width: 33px;
   height: 1.5px;
   font-size: 0.1em;
   line-height: 0;
 }
-body header .presentation__spectrum h1 {
-  color: #FFFFFF;
-  font-size: 3em;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 40px auto;
-}
-body header .presentation__spectrum h2 {
-  font-size: 1em;
-  color: #C39469;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: auto;
-}
-body header .presentation__spectrum button {
-  color: #FFFFFF;
-  background-color: #282828;
-  font-size: 0.8em;
-  font-weight: 700;
-  padding: 20px 40px 20px 40px;
-  border: 1.5px solid #C39469;
-  margin: 40px 0px 20px 80px;
-}
 body header .presentation .slideContainer {
   width: 100%;
-  height: 100%;
+  grid-row: 1/3;
+  grid-column: 2/3;
   /* Fading animation */
+}
+@media screen and (max-width: 576px) {
+  body header .presentation .slideContainer {
+    height: 260px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  body header .presentation .slideContainer {
+    grid-row: 2/3;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body header .presentation .slideContainer {
+    grid-row: 2/3;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  body header .presentation .slideContainer {
+    grid-row: 2/3;
+  }
 }
 body header .presentation .slideContainer .slider {
   display: none;
@@ -99,9 +159,114 @@ body header .presentation .slideContainer .fade {
     opacity: 1;
   }
 }
+body header .presentation__spectrum {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  body header .presentation__spectrum {
+    margin: 15px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body header .presentation__spectrum {
+    margin: 20px;
+  }
+}
+body header .presentation__spectrum h1 {
+  color: #FFFFFF;
+  font-size: 3em;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+@media screen and (max-width: 576px) {
+  body header .presentation__spectrum h1 {
+    font-size: 1.9em;
+    margin: 20px auto;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  body header .presentation__spectrum h1 {
+    font-size: 1.8em;
+    margin: 40px auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body header .presentation__spectrum h1 {
+    font-size: 2.4em;
+    margin: 40px 0;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  body header .presentation__spectrum h1 {
+    font-size: 2.5em;
+  }
+}
+body header .presentation__spectrum h2 {
+  font-size: 1em;
+  color: #C39469;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  body header .presentation__spectrum h2 {
+    margin: auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  body header .presentation__spectrum h2 {
+    margin: 0;
+  }
+}
+body header .presentation__spectrum button {
+  color: #FFFFFF;
+  background-color: #282828;
+  font-size: 0.8em;
+  font-weight: 800;
+  padding: 18px 45px 18px 45px;
+  border: 1.5px solid #C39469;
+  margin: 40px 0px 20px 80px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media screen and (max-width: 576px) {
+  body header .presentation__spectrum button {
+    margin: 20px 0;
+    align-self: center;
+    font-size: 0.8em;
+    padding: 14px 40px 14px 40px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  body header .presentation__spectrum button {
+    margin: 30px auto;
+    font-size: 0.7em;
+    padding: 14px 40px 14px 40px;
+    align-self: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body header .presentation__spectrum button {
+    margin: 40px 0;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  body header .presentation__spectrum button {
+    margin: 40px 0px 20px 40px;
+  }
+}
 body header .sliderNav {
   display: grid;
   grid-template-columns: 30% 70%;
+}
+@media screen and (max-width: 576px) {
+  body header .sliderNav {
+    display: flex;
+    flex-direction: column;
+  }
 }
 body header .sliderNav__arrow {
   background-color: #313131;
@@ -118,13 +283,70 @@ body header .sliderNav__arrow div {
   top: -50%;
   left: 42%;
 }
+@media screen and (max-width: 576px) {
+  body header .sliderNav__arrow div {
+    padding: 10px;
+    top: 0;
+    left: 0;
+    background-color: #313131;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  body header .sliderNav__arrow div {
+    padding: 20px;
+    top: 0;
+    left: 0;
+    background-color: #313131;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body header .sliderNav__arrow div {
+    padding: 20px;
+    top: 0;
+    left: 0;
+    background-color: #313131;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  body header .sliderNav__arrow div {
+    padding: 20px;
+    top: -50%;
+  }
+}
 body header .sliderNav__arrow div .fa-solid {
-  color: #FFFFFF;
+  color: rgba(255, 255, 255, 0.7);
   font-size: 1.5em;
   padding: 20px;
-  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  border: 1.7px solid rgba(255, 255, 255, 0.7);
   border-radius: 50%;
   cursor: pointer;
+}
+@media screen and (max-width: 576px) {
+  body header .sliderNav__arrow div .fa-solid {
+    font-size: 1em;
+    padding: 15px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  body header .sliderNav__arrow div .fa-solid {
+    font-size: 1em;
+    padding: 15px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body header .sliderNav__arrow div .fa-solid {
+    font-size: 1em;
+    padding: 15px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  body header .sliderNav__arrow div .fa-solid {
+    font-size: 1em;
+    padding: 15px;
+  }
 }
 body header .sliderNav__works {
   background-color: #282828;
@@ -135,15 +357,42 @@ body header .sliderNav__works {
   gap: 100px;
   padding: 0 20px;
 }
+@media screen and (max-width: 576px) {
+  body header .sliderNav__works {
+    flex-direction: column-reverse;
+    gap: 0px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 1024px) {
+  body header .sliderNav__works {
+    flex-direction: column-reverse;
+    gap: 0px;
+  }
+}
 body header .sliderNav__works h2 {
   color: #313131;
   font-size: 4em;
   font-weight: 800;
   margin: 0;
 }
+@media screen and (max-width: 576px) {
+  body header .sliderNav__works h2 {
+    font-size: 1.5em;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  body header .sliderNav__works h2 {
+    font-size: 2em;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  body header .sliderNav__works h2 {
+    font-size: 2.2em;
+  }
+}
 body header .sliderNav__works .worksInfos {
   display: flex;
-  gap: 40px;
+  gap: 35px;
   justify-content: space-between;
 }
 body header .sliderNav__works .sliderAdress {

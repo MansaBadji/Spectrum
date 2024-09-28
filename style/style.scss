@@ -15,64 +15,105 @@ body {
         .presentation {
             display: grid;
             grid-template-columns: 30% 70%;
+            grid-template-rows: 10% 90%;
             height: 580px;
             background-color: #282828;
-            &__spectrum {
-                div {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
+            @media screen and (max-width: 576px) {
+                display: flex;
+                flex-direction: column;
+                height: auto;
+            }
+            @media screen and (min-width: 576px) and (max-width: 768px) {
+                grid-template-columns: 35% 65%;
+                height: 450px;
+            }
+            @media screen and (min-width: 768px) and (max-width: 992px) {
+                height: 470px;
+            }
+            @media screen and (min-width: 992px) and (max-width: 1024px) {
+                height: 500px;
+            }
+            @media screen and (min-width: 1024px) and (max-width: 1281px) {
+                
+            }
+            .logoMenu {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 10px;
+                padding-right: 40px;
+                @media screen and (max-width: 576px) {
                     padding: 10px;
-                    margin-right: 40px;
-                    .logo {
-                        width: 200px;
-                        cursor: pointer;
-                    }
-                    .menu {
-                        display: flex;
-                        flex-direction: column;
-                        background-color: #282828;
-                        justify-content: center;
-                        gap: 5px;
-                        padding: 0px;
-                        padding-bottom: 1px;
-                        margin: 0px;
-                        cursor: pointer;
-                    }
-                    .menu p {
-                        background-color: #FFFFFF;
-                        width: 35px;
-                        height: 1.5px;
-                        font-size: .1em;
-                        line-height: 0;
-                    }
+                    box-shadow: 6px 0px 25px black;
+                    position: sticky;
+                    top: 0;
                 }
-                h1 {
-                    color: #FFFFFF;
-                    font-size: 3em;
-                    width: fit-content;
-                    margin: 40px auto;
+                @media screen and (min-width: 576px) and (max-width: 768px) {
+                    grid-column: 1 / 3;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    box-shadow: 6px 0px 25px black;
+                    position: sticky;
+                    top: 0;
                 }
-                h2 {
-                    font-size: 1em;
-                    color: #C39469;
-                    width: fit-content;
-                    margin: auto;
+                @media screen and (min-width: 768px) and (max-width: 992px) {
+                    grid-column: 1 / 3;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    box-shadow: 6px 0px 25px black;
+                    position: sticky;
+                    top: 0;
                 }
-                button {
-                    color: #FFFFFF;
+                @media screen and (min-width: 992px) and (max-width: 1024px) {
+                    grid-column: 1 / 3;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    box-shadow: 6px 0px 25px black;
+                    position: sticky;
+                    top: 0;
+                }
+
+                &__logo {
+                    width: 200px;
+                    cursor: pointer;
+                }
+                &__menu {
+                    display: flex;
+                    flex-direction: column;
                     background-color: #282828;
-                    font-size: .8em;
-                    font-weight: 700;
-                    padding: 20px 40px 20px 40px;
-                    border: 1.5px solid #C39469;
-                    margin: 40px 0px 20px 80px;
+                    justify-content: center;
+                    gap: 3.5px;
+                    padding: 0px;
+                    padding-bottom: 1px;
+                    margin: 0px;
+                    cursor: pointer;
+                }
+                &__menu p {
+                    background-color: #FFFFFF;
+                    width: 33px;
+                    height: 1.5px;
+                    font-size: .1em;
+                    line-height: 0;
                 }
             }
 
             .slideContainer {
                 width: 100%;
-                height: 100%;
+                grid-row: 1 / 3;
+                grid-column: 2 / 3;
+                @media screen and (max-width: 576px) {
+                    height: 260px;
+                }
+                @media screen and (min-width: 576px) and (max-width: 768px) {
+                    grid-row: 2 / 3;
+                }
+                @media screen and (min-width: 768px) and (max-width: 992px) {
+                    grid-row: 2 / 3;
+                }
+                @media screen and (min-width: 992px) and (max-width: 1024px) {
+                    grid-row: 2 / 3;
+                }
+
                 .slider {
                     display: none;
                     width: 100%;
@@ -100,11 +141,88 @@ body {
                     to {opacity: 1}
                 }
             }
+
+            &__spectrum {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                @media screen and (min-width: 576px) and (max-width: 768px) {
+                    margin: 15px;
+                }
+                @media screen and (min-width: 768px) and (max-width: 992px) {
+                    margin: 20px;
+                }
+                h1 {
+                    color: #FFFFFF;
+                    font-size: 3em;
+                    width: fit-content;
+                    margin: auto;
+                    @media screen and (max-width: 576px) {
+                        font-size: 1.9em;
+                        margin: 20px auto;
+                    }
+                    @media screen and (min-width: 576px) and (max-width: 768px) {
+                        font-size: 1.8em;
+                        margin: 40px auto;
+                    }
+                    @media screen and (min-width: 768px) and (max-width: 992px) {
+                        font-size: 2.4em;
+                        margin: 40px 0;
+                    }
+                    @media screen and (min-width: 992px) and (max-width: 1024px) {
+                        font-size: 2.5em;
+                    }
+                }
+                h2 {
+                    font-size: 1em;
+                    color: #C39469;
+                    width: fit-content;
+                    margin: auto;
+                    @media screen and (min-width: 576px) and (max-width: 768px) {
+                        margin: auto;
+                    }
+                    @media screen and (min-width: 768px) and (max-width: 991px) {
+                        margin: 0;
+                    }
+                }
+                button {
+                    color: #FFFFFF;
+                    background-color: #282828;
+                    font-size: .8em;
+                    font-weight: 800;
+                    padding: 18px 45px 18px 45px;
+                    border: 1.5px solid #C39469;
+                    margin: 40px 0px 20px 80px;
+                    width: fit-content;
+                    @media screen and (max-width: 576px) {
+                        margin: 20px 0;
+                        align-self: center;
+                        font-size: .8em;
+                        padding: 14px 40px 14px 40px;
+                    }
+                    @media screen and (min-width: 576px) and (max-width: 768px) {
+                        margin: 30px auto;
+                        font-size: .7em;
+                        padding: 14px 40px 14px 40px;
+                        align-self: center;
+                    }
+                    @media screen and (min-width: 768px) and (max-width: 992px) {
+                        margin: 40px 0;
+                    }
+                    @media screen and (min-width: 992px) and (max-width: 1024px) {
+                        margin: 40px 0px 20px 40px;
+                    }
+                }
+            }
         }
 
         .sliderNav {
             display: grid;
             grid-template-columns: 30% 70%;
+            @media screen and (max-width: 576px) {
+                display: flex;
+                flex-direction: column;
+            }
             &__arrow {
                 background-color: #313131;
             }
@@ -118,13 +236,54 @@ body {
                 padding: 30px;
                 top: -50%;
                 left: 42%;
+                @media screen and (max-width: 576px) {
+                    padding: 10px;
+                    top: 0;
+                    left: 0;
+                    background-color: #313131;
+                    margin: auto;
+                }
+                @media screen and (min-width: 576px) and (max-width: 768px) {
+                    padding: 20px;
+                    top: 0;
+                    left: 0;
+                    background-color: #313131;
+                    margin: auto;
+                }
+                @media screen and (min-width: 768px) and (max-width: 992px) {
+                    padding: 20px;
+                    top: 0;
+                    left: 0;
+                    background-color: #313131;
+                    margin: auto;
+                }
+                @media screen and (min-width: 992px) and (max-width: 1024px) {
+                    padding: 20px;
+                    top: -50%;
+                }
                 .fa-solid {
-                    color: #FFFFFF;
+                    color: rgba($color: #FFFFFF, $alpha: .7);
                     font-size: 1.5em;
                     padding: 20px;
-                    border: 1.5px solid rgba($color: #FFFFFF, $alpha: .7);
+                    border: 1.7px solid rgba($color: #FFFFFF, $alpha: .7);
                     border-radius: 50%;
                     cursor: pointer;
+                    @media screen and (max-width: 576px) {
+                        font-size: 1em;
+                        padding: 15px;
+                    }
+                    @media screen and (min-width: 576px) and (max-width: 768px) {
+                        font-size: 1em;
+                        padding: 15px;
+                    }
+                    @media screen and (min-width: 768px) and (max-width: 992px) {
+                        font-size: 1em;
+                        padding: 15px;
+                    }
+                    @media screen and (min-width: 992px) and (max-width: 1024px) {
+                        font-size: 1em;
+                        padding: 15px;
+                    }
                 }
             }
 
@@ -136,15 +295,32 @@ body {
                 justify-content: space-between;
                 gap: 100px;
                 padding: 0 20px;
+                @media screen and (max-width: 576px) {
+                    flex-direction: column-reverse;
+                    gap: 0px;
+                }
+                @media screen and (min-width: 576px) and (max-width: 1024px) {
+                    flex-direction: column-reverse;
+                    gap: 0px;
+                }
                 h2 {
                     color: #313131;
                     font-size: 4em;
                     font-weight: 800;
                     margin: 0;
+                    @media screen and (max-width: 576px) {
+                        font-size: 1.5em;
+                    }
+                    @media screen and (min-width: 576px) and (max-width: 768px) {
+                        font-size: 2em;
+                    }
+                    @media screen and (min-width: 768px) and (max-width: 1024px) {
+                        font-size: 2.2em;
+                    }
                 }
                 .worksInfos {
                     display: flex;
-                    gap: 40px;
+                    gap: 35px;
                     justify-content: space-between;
                 }
             }
