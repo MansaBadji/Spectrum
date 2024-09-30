@@ -723,4 +723,181 @@ body main .expertise__contactForm form button {
     width: 120px;
     height: 40px;
   }
+}
+body main .workMethod {
+  display: flex;
+  flex-direction: row;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: #282828;
+  padding: 80px 150px 80px 150px;
+}
+@media screen and (max-width: 576px) {
+  body main .workMethod {
+    flex-direction: column;
+    gap: 10px;
+    padding: 80px 30px 80px 30px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  body main .workMethod {
+    flex-direction: column;
+    gap: 10px;
+    padding: 80px 30px 80px 30px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body main .workMethod {
+    flex-direction: column;
+    gap: 10px;
+    padding: 80px 30px 80px 30px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  body main .workMethod {
+    padding: 80px 30px 80px 30px;
+  }
+}
+body main .workMethod__details {
+  width: 50%;
+  margin-right: 200px;
+}
+@media screen and (max-width: 576px) {
+  body main .workMethod__details {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  body main .workMethod__details {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body main .workMethod__details {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  body main .workMethod__details {
+    width: 40%;
+    margin-right: 30px;
+  }
+}
+body main .workMethod__details h4 {
+  color: #C4956A;
+  margin: 0;
+}
+body main .workMethod__details h2 {
+  font-size: 4.3em;
+  color: #FFFFFF;
+  font-weight: 700;
+  letter-spacing: 0px;
+  margin: 10px 80px 0 0;
+  line-height: 1.1em;
+}
+@media screen and (max-width: 576px) {
+  body main .workMethod__details h2 {
+    font-size: 2.6em;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  body main .workMethod__details h2 {
+    font-size: 2.6em;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body main .workMethod__details h2 {
+    font-size: 3em;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  body main .workMethod__details h2 {
+    font-size: 3.6em;
+  }
+}
+body main .workMethod__details h3 {
+  font-size: 1.8em;
+  color: #C39469;
+  margin-top: 30px;
+}
+body main .workMethod__details p {
+  font-size: 1.015em;
+  line-height: 1.5em;
+}
+body main .workMethod__list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 50%;
+  /*
+  ol #methodWorkList1 {
+      opacity: 1;
+  }
+  */
+}
+@media screen and (max-width: 576px) {
+  body main .workMethod__list {
+    width: 100%;
+    gap: 20px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  body main .workMethod__list {
+    width: 100%;
+    gap: 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body main .workMethod__list {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  body main .workMethod__list {
+    width: 60%;
+  }
+}
+body main .workMethod__list ol {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 0;
+}
+@media screen and (max-width: 576px) {
+  body main .workMethod__list ol {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  body main .workMethod__list ol {
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body main .workMethod__list ol {
+    gap: 30px;
+  }
+}
+body main .workMethod__list ol li {
+  font-size: 0.96em;
+  font-weight: 800;
+  list-style-type: decimal-leading-zero;
+  list-style-position: inside;
+  list-style-image: none;
+  color: #FFFFFF;
+  opacity: 0.4;
+  cursor: pointer;
+}
+body main .workMethod__list ol li:hover {
+  opacity: 1;
+}
+body main .workMethod__list ol li span {
+  margin-left: 8px;
+}
+body main .workMethod__list img {
+  border-radius: 5px;
 }/*# sourceMappingURL=style.css.map */
