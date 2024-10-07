@@ -429,10 +429,88 @@ body header .sliderNav__works .sliderPrice, body header .sliderNav__works .slide
     margin-bottom: 8px;
   }
 }
+body main {
+  /*
+  .ourTeam {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 80px 20px;
+      background-color: #F5F5F5;
+      &__title {
+          font-size: 1.9em;
+          letter-spacing: 0;
+          margin-bottom: 0;
+      }
+
+      &__subTitle {
+          font-size: 1em;
+          color: #C4956A;
+          letter-spacing: 0;
+      }
+
+      &__details {
+          display: flex;
+          flex-direction: row;
+          gap: 5px;
+          margin-top: 40px;
+          .team {
+              .posteSM {
+                  display: grid;
+                  grid-template-columns: 1fr 1fr;
+                  padding: 0 10px;
+              }
+              .posteSM h3 {
+                  grid-column: 1 / 3;
+                  font-size: .95em;
+                  color: #C4956A;
+                  font-weight: 500;
+                  letter-spacing: 0;
+                  margin-top: 0;
+                  padding: 5px 10px;
+              }
+              .posteSM .line {
+                  width: 70px;
+                  height: 1.05px;
+                  background-color: #000000;
+                  margin-left: 10px;
+              }
+              .posteSM .teamSM {
+                  display: flex;
+                  flex-direction: row;
+                  gap: 20px;
+                  font-size: 1.2em;
+                  color: rgba($color: #000000, $alpha: .7);
+                  .fa-brands {
+                      cursor: pointer;
+                  }
+                  .fa-brands:hover {
+                      color: #C39469;
+                  }
+              }
+          }
+          .team h2 {
+              font-size: 1.15em;
+              color: rgba($color: #000000, $alpha: .9);
+              letter-spacing: 0;
+              background-color: #FFFFFF;
+              margin-top: -3.7px;
+              margin-bottom: 0;
+              padding: 8px 20px;
+              cursor: pointer;
+          }
+          .team h2:hover {
+              color: #C39469;
+          }
+      }
+  }
+  */
+}
 body main .expertise {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 80px 20px 80px 20px;
+  background-color: #FFFFFF;
 }
 @media screen and (max-width: 576px) {
   body main .expertise {
@@ -900,4 +978,374 @@ body main .workMethod__list ol li span {
 }
 body main .workMethod__list img {
   border-radius: 5px;
+}
+body main .awards {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: center;
+  padding: 120px 20px 120px 20px;
+}
+@media screen and (max-width: 576px) {
+  body main .awards {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 20px 60px 20px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  body main .awards {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 20px 60px 20px;
+  }
+}
+body main .awards__index-bg {
+  grid-column: 1/3;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: auto;
+  margin-top: 35px;
+}
+@media screen and (max-width: 576px) {
+  body main .awards__index-bg {
+    display: none;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  body main .awards__index-bg {
+    display: none;
+  }
+}
+body main .awards__presentation {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  left: 10%;
+}
+@media screen and (max-width: 576px) {
+  body main .awards__presentation {
+    position: initial;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  body main .awards__presentation {
+    position: initial;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body main .awards__presentation {
+    left: 30px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  body main .awards__presentation {
+    left: 30px;
+  }
+}
+body main .awards__presentation h2 {
+  font-size: 2em;
+  letter-spacing: 0px;
+  margin: 0;
+}
+@media screen and (max-width: 576px) {
+  body main .awards__presentation h2 {
+    font-size: 1.6em;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  body main .awards__presentation h2 {
+    font-size: 1.6em;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body main .awards__presentation h2 {
+    font-size: 1.8em;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  body main .awards__presentation h2 {
+    font-size: 1.9em;
+  }
+}
+body main .awards__presentation h3 {
+  font-size: 1.025em;
+  color: #C39469;
+  letter-spacing: 0px;
+  margin: 0;
+}
+body main .awards__presentation .playVideo {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 40px;
+}
+body main .awards__presentation .playVideo img {
+  margin: 0;
+  border-radius: 8px;
+  box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.4);
+}
+@media screen and (max-width: 768px) {
+  body main .awards__presentation .playVideo img {
+    box-shadow: none;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body main .awards__presentation .playVideo img {
+    width: 65%;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  body main .awards__presentation .playVideo img {
+    width: 85%;
+  }
+}
+body main .awards__presentation .playVideo .fa-solid {
+  font-size: 6em;
+  color: #FFFFFF;
+  background-color: #000000;
+  padding: 0;
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body main .awards__presentation .playVideo .fa-solid {
+    font-size: 5em;
+    top: 51%;
+    left: 33%;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  body main .awards__presentation .playVideo .fa-solid {
+    font-size: 5.5em;
+    top: 50%;
+    left: 43%;
+  }
+}
+body main .awards__presentation .playVideo .fa-solid:hover {
+  color: #C39469;
+  background-color: #FFFFFF;
+}
+body main .awards__win {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: absolute;
+  right: 5%;
+  margin-top: 40px;
+  width: 30%;
+}
+@media screen and (max-width: 576px) {
+  body main .awards__win {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    position: initial;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  body main .awards__win {
+    position: initial;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body main .awards__win {
+    right: 30px;
+    margin-top: 0px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  body main .awards__win {
+    right: 30px;
+    margin-top: 20px;
+  }
+}
+body main .awards__win .ourAwards {
+  width: 100%;
+}
+body main .awards__win .ourAwards .awardsText {
+  font-size: 1.08em;
+  letter-spacing: 0;
+  color: rgba(0, 0, 0, 0.6);
+  width: 70%;
+  margin: 0;
+}
+@media screen and (max-width: 576px) {
+  body main .awards__win .ourAwards .awardsText {
+    font-size: 0.9em;
+    text-align: center;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  body main .awards__win .ourAwards .awardsText {
+    font-size: 0.9em;
+    text-align: center;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body main .awards__win .ourAwards .awardsText {
+    font-size: 1em;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  body main .awards__win .ourAwards .awardsText {
+    font-size: 1em;
+    width: 80%;
+  }
+}
+body main .awards__win .ourAwards > div {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media screen and (max-width: 576px) {
+  body main .awards__win .ourAwards > div {
+    flex-direction: column;
+    gap: 0px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  body main .awards__win .ourAwards > div {
+    flex-direction: column;
+    gap: 0px;
+    width: 100%;
+  }
+}
+body main .awards__win .ourAwards > div .awardsNumber {
+  font-size: 4em;
+  margin: 0;
+}
+@media screen and (max-width: 576px) {
+  body main .awards__win .ourAwards > div .awardsNumber {
+    font-size: 2.5em;
+    text-align: center;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  body main .awards__win .ourAwards > div .awardsNumber {
+    font-size: 2.5em;
+    text-align: center;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body main .awards__win .ourAwards > div .awardsNumber {
+    font-size: 3em;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1024px) {
+  body main .awards__win .ourAwards > div .awardsNumber {
+    font-size: 3.8em;
+  }
+}
+body main .awards__win .ourAwards > div div {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 576px) {
+  body main .awards__win .ourAwards > div div {
+    align-items: center;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  body main .awards__win .ourAwards > div div {
+    align-items: center;
+  }
+}
+body main .awards__win .ourAwards > div div .awardsTitle {
+  font-size: 1em;
+  letter-spacing: 0px;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 576px) {
+  body main .awards__win .ourAwards > div div .awardsTitle {
+    margin: 0;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  body main .awards__win .ourAwards > div div .awardsTitle {
+    margin: 0;
+    text-align: center;
+  }
+}
+body main .awards__win .ourAwards > div div .awardLine {
+  width: 20px;
+  height: 7px;
+  background-color: #C39469;
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  body main .awards__win .ourAwards > div div .awardLine {
+    margin-bottom: 10px;
+    height: 4px;
+  }
+}
+@media screen and (max-width: 576px) {
+  body main .awards__win .award3 {
+    position: relative;
+    left: 50%;
+  }
+}
+body main .awards__win button {
+  font-size: 0.75em;
+  color: #FFFFFF;
+  font-weight: 800;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #C39469;
+  padding: 17px 40px 17px 40px;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+}
+@media screen and (max-width: 576px) {
+  body main .awards__win button {
+    grid-row: 3/4;
+    font-size: 0.7em;
+    padding: 10px 30px 10px 30px;
+    position: relative;
+    left: 50%;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  body main .awards__win button {
+    grid-column: 2/3;
+    padding: 12px 32px 12px 32px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  body main .awards__win button {
+    padding: 12px 32px 12px 32px;
+  }
+}
+body main .awards__win button:hover {
+  color: #C39469;
+  background-color: #FFFFFF;
+  border: 1px solid #C39469;
 }/*# sourceMappingURL=style.css.map */
