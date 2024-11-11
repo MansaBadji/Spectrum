@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style/style.css" rel="stylesheet">
-    <script src="script/script.js" defer></script>
     <title>Spectrum</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <link href="style/style.css" rel="stylesheet">
+    <script src="script/script.js" defer></script>
 </head>
 <body>
     <header>
@@ -127,12 +132,12 @@
                 <img id="methodWorkImg" src="images/index-1.jpg">
             </div>
         </section>
-        <!--
+        
         <section class="ourTeam">
             <h2 class="ourTeam__title">OUR TEAM</h2>
             <h3 class="ourTeam__subTitle">PEOPLE BEHIND OUR SUCCESS</h3>
             <div class="ourTeam__details">
-                <div class="team">
+                <div class="itemTeam">
                     <img src="images/team/team-1.jpg" alt="Image of the lead interior design">
                     <h2>MARY SCOTT</h2>
                     <div class="posteSM">
@@ -145,8 +150,7 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="team">
+                <div class="itemTeam">
                     <img src="images/team/team-2.jpg" alt="Image of the senior architect">
                     <h2>JOHN BALMER</h2>
                     <div class="posteSM">
@@ -159,8 +163,7 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="team">
+                <div class="itemTeam">
                     <img src="images/team/team-3.jpg" alt="Image of the Exterior & Landscape Designer">
                     <h2>ANN SMITH</h2>
                     <div class="posteSM">
@@ -173,8 +176,7 @@
                         </div>
                     </div>
                 </div>
-                
-                <div class="team">
+                <div class="itemTeam">
                     <img src="images/team/team-4.jpg" alt="Image of the Project Manager">
                     <h2>KATE MCMILLAN</h2>
                     <div class="posteSM">
@@ -189,7 +191,6 @@
                 </div>
             </div>
         </section>
-        -->
         
         <section class="awards">
             <div class="awards__index-bg">
@@ -243,6 +244,136 @@
                 <button>CONTACT US</button>
             </div>
         </section>
+
+        <section class="projects">
+            <div class="projects__head">
+                <h2>PRO<span>JECTS</span></h2>
+                <p>Below you can take a look at our featured and recent projects that have been numerously awarded for our unique architectural approach.</p>
+            </div>
+                
+            <!-- Slider main container -->
+            <div class="swiper projects__slider">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="slide">
+                            <img src="images/projects/project-1.jpg">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <div class="descriptionProject">
+                                <div>
+                                    <h3>MARCH 15, 2019</h3>
+                                    <p class="swiperLine"></p>
+                                    <h3>ARCHITECTURE</h3>
+                                </div>
+                                <h2>3119 MULBERRY LN, NEWCASTLE, OK</h2>
+                                <p>We have worked on this project for three months to completely extend and redesign the old 2-storey house.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide">
+                            <img src="images/projects/project-2.jpg">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <div class="descriptionProject">
+                                <div>
+                                    <h3>JUNE 19, 2019</h3>
+                                    <p class="swiperLine"></p>
+                                    <h3>EXTERIOR DESIGN</h3>
+                                </div>
+                                <h2>4367 LIBERTY ST, IRVING, TX</h2>
+                                <p>Our team of exterior designers and architects integrated the latest innovations in this residential project.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide">
+                            <img src="images/projects/project-3.jpg">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <div class="descriptionProject">
+                                <div>
+                                    <h3>JANUARY 10, 2019</h3>
+                                    <p class="swiperLine"></p>
+                                    <h3>LANDSCAPE DESIGN</h3>
+                                </div>
+                                <h2>2560 RUSSELL ST, BOSTON, MA</h2>
+                                <p>As one of our first projects in 2019, this house features unique landscape design solutions and work on exterior.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+            
+                <!-- If we need navigation buttons -->
+                <div class="sliderNav">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+            </div>
+
+            <script type="module">
+                import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+            
+                const swiper = new Swiper('.swiper', {
+                    // Optional parameters
+                    direction: 'horizontal',
+                    effect: 'coverflow',
+                    grabCursor: true,
+                    centeredSlides: true,
+                    slidesPerView: 'auto',
+                    spaceBetween: 430,
+                    coverflowEffect: {
+                        rotate: 0,
+                        modifier: 1,
+                        scale: 1.08,
+                        stretch: 0,
+                        depth: 100,
+                        slideShadows: false
+                    },
+                    loop: true,
+
+                    // Navigation arrows
+                    navigation: {
+                        nextEl: '.fa-arrow-right',
+                        prevEl: '.fa-arrow-left',
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                });
+            </script>
+        </section>
+
+        <section class="blogPosts">
+            <h2 class="blogPosts__h2">FIND NEW IDEAS AND
+                <br>INSPIRATION IN OUR BLOG</h2>
+            <h3 class="blogPosts__h3">LATTEST BLOG POSTS</h3>
+
+            <div class="blogPosts__div">
+                <div>
+                    <h2>JUNE 19, 2019</h2>
+                    <img src="images/posts/post-1.jpg">
+                    <h3>HOW ART INFLUENCES MODERN ARCHITECTURE</h3>
+                    <p>Looking through our recent, impactful projects, we set out to ask the designers about their opinion...</p>
+                </div>
+                <div>
+                    <h2>MAY 30, 2019</h2>
+                    <img src="images/posts/post-2.jpg">
+                    <h3>NEW TRENDS IN ARCHITECTURE: OVERVIEW</h3>
+                    <p>Architecture is constantly evolving based on changes in our culture, society and the environment. While...</p>
+                </div>
+                <div>
+                    <h2>APRIL 15, 2019</h2>
+                    <img src="images/posts/post-3.jpg">
+                    <h3>WORKING WITH AN ARCHITECT: 10 USEFUL TIPS</h3>
+                    <p>A skilled architect will elevate the work you do to your home from the ordinary to the wonderful. Here’s...</p>
+                </div>
+            </div>
+        </section>
     </main>
+
 </body>
 </html>

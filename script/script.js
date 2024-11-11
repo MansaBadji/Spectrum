@@ -123,3 +123,31 @@ function changeWMList(index) {
         mwthodWorkText.innerHTML = text;
     }
 }
+/*
+import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+      
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    spaceBetween: 430,
+    coverflowEffect: {
+        rotate: 0,
+        modifier: 1,
+        scale: 1.08,
+        stretch: 0,
+        depth: 100,
+        slideShadows: false
+    },
+    loop: true,
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.fa-arrow-right',
+        prevEl: '.fa-arrow-left',
+    },
+});
+*/

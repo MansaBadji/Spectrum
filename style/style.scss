@@ -119,15 +119,17 @@ body {
                     width: 100%;
                     height: 100%;
                     background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
                 }
                 .slider1 {
-                    background-image: url("../images/slider/imgHeader1.jpg");
+                    background-image: url("../images/projects/project-1.jpg");
                 }
                 .slider2 {
-                    background-image: url("../images/slider/imgHeader2.jpg");
+                    background-image: url("../images/projects/project-2.jpg");
                 }
                 .slider3 {
-                    background-image: url("../images/slider/imgHeader3.jpg");
+                    background-image: url("../images/projects/project-3.jpg");
                 }
 
                 /* Fading animation */
@@ -178,6 +180,7 @@ body {
                     color: #C39469;
                     width: fit-content;
                     margin: auto;
+                    margin-top: 0;
                     @media screen and (min-width: 576px) and (max-width: 768px) {
                         margin: auto;
                     }
@@ -192,7 +195,7 @@ body {
                     font-weight: 800;
                     padding: 18px 45px 18px 45px;
                     border: 1.5px solid #C39469;
-                    margin: 40px 0px 20px 80px;
+                    margin: 0px 0px 100px 0px;
                     width: fit-content;
                     @media screen and (max-width: 576px) {
                         margin: 20px 0;
@@ -726,7 +729,7 @@ body {
                 border-radius: 5px;
             }
         }
-        /*
+        
         .ourTeam {
             display: flex;
             flex-direction: column;
@@ -748,44 +751,51 @@ body {
             &__details {
                 display: flex;
                 flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
                 gap: 5px;
                 margin-top: 40px;
-                .team {
-                    .posteSM {
-                        display: grid;
-                        grid-template-columns: 1fr 1fr;
-                        padding: 0 10px;
+            }
+
+            &__details .itemTeam {
+                width: fit-content;
+                .posteSM {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    padding: 0 10px;
+                }
+                .posteSM h3 {
+                    grid-column: 1 / 3;
+                    font-size: .95em;
+                    color: #C4956A;
+                    font-weight: 500;
+                    letter-spacing: 0;
+                    margin-top: 0;
+                    padding: 5px 10px;
+                }
+                .posteSM .line {
+                    width: 70px;
+                    height: 1.05px;
+                    background-color: #000000;
+                    margin-left: 10px;
+                }
+                .posteSM .teamSM {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 20px;
+                    font-size: 1.2em;
+                    color: rgba($color: #000000, $alpha: .7);
+                    .fa-brands {
+                        cursor: pointer;
                     }
-                    .posteSM h3 {
-                        grid-column: 1 / 3;
-                        font-size: .95em;
-                        color: #C4956A;
-                        font-weight: 500;
-                        letter-spacing: 0;
-                        margin-top: 0;
-                        padding: 5px 10px;
-                    }
-                    .posteSM .line {
-                        width: 70px;
-                        height: 1.05px;
-                        background-color: #000000;
-                        margin-left: 10px;
-                    }
-                    .posteSM .teamSM {
-                        display: flex;
-                        flex-direction: row;
-                        gap: 20px;
-                        font-size: 1.2em;
-                        color: rgba($color: #000000, $alpha: .7);
-                        .fa-brands {
-                            cursor: pointer;
-                        }
-                        .fa-brands:hover {
-                            color: #C39469;
-                        }
+                    .fa-brands:hover {
+                        color: #C39469;
                     }
                 }
-                .team h2 {
+                img {
+                    width: fit-content;
+                }
+                h2 {
                     font-size: 1.15em;
                     color: rgba($color: #000000, $alpha: .9);
                     letter-spacing: 0;
@@ -795,18 +805,18 @@ body {
                     padding: 8px 20px;
                     cursor: pointer;
                 }
-                .team h2:hover {
+                h2:hover {
                     color: #C39469;
                 }
             }
         }
-        */
         
         .awards {
             display: grid;
             grid-template-columns: 2fr 1fr;
             justify-content: center;
             padding: 120px 20px 120px 20px;
+            background-color: #FFFFFF;
             @media screen and (max-width: 576px) {
                 display: flex;
                 flex-direction: column;
@@ -1091,6 +1101,426 @@ body {
                     color: #C39469;
                     background-color: #FFFFFF;
                     border: 1px solid #C39469;
+                }
+            }
+        }
+
+        .projects {
+            padding: 80px 0;
+            background-color: #F5F5F5;
+            @media screen and (max-width: 768px) {
+                padding: 50px 0;
+            }
+            &__head {
+                display: flex;
+                flex-direction: row;
+                gap: 100px;
+                margin-left: 170px;
+                padding: 30px 0;
+                border-bottom: 4px solid #C39469;
+                @media screen and (max-width: 576px) {
+                    flex-direction: column;
+                    gap: 10px;
+                    margin-top: 0;
+                    padding: 15px 0;
+                    padding-top: 0;
+                    align-items: center;
+                    margin: 10px 20px;
+                }
+                @media screen and (min-width: 576px) and (max-width: 768px) {
+                    flex-direction: column;
+                    gap: 10px;
+                    margin: 10px 130px;
+                    margin-top: 0;
+                    padding: 15px 0;
+                    padding-top: 0;
+                    align-items: center;
+                }
+                @media screen and (min-width: 768px) and (max-width: 992px) {
+                    margin-left: 40px;
+                    gap: 60px;
+                    padding: 20px 0;
+                }
+                @media screen and (min-width: 992px) and (max-width: 1024px) {
+                    margin-left: 40px;
+                    padding: 25px 0;
+                }
+
+                h2 {
+                    font-size: 4em;
+                    letter-spacing: 0;
+                    font-weight: 700;
+                    margin: 0;
+                    @media screen and (max-width: 576px) {
+                        font-size: 2.3em;
+                    }
+                    @media screen and (min-width: 576px) and (max-width: 768px) {
+                        font-size: 2.5em;
+                    }
+                    @media screen and (min-width: 768px) and (max-width: 992px) {
+                        font-size: 2.8em;
+                    }
+                    @media screen and (min-width: 992px) and (max-width: 1024px) {
+                        font-size: 3.5em;
+                    }
+                    span {
+                        font-weight: 300;
+                    }
+                }
+                p {
+                    font-size: 1.12em;
+                    color: rgba($color: #000000, $alpha: .6);
+                    line-height: 1.5em;
+                    margin: 0;
+                    align-self: center;
+                    margin-right: 200px;
+                    @media screen and (max-width: 768px) {
+                        font-size: .9em;
+                        text-align: center;
+                        margin: 0;
+                    }
+                    @media screen and (min-width: 768px) and (max-width: 992px) {
+                        margin-right: 40px;
+                        font-size: 1em;
+                    }
+                    @media screen and (min-width: 992px) and (max-width: 1024px) {
+                        margin-right: 40px;
+                        font-size: 1.05em;
+                    }
+                }
+            }
+
+            &__slider {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin: 90px 0 40px 0;
+                @media screen and (max-width: 768px) {
+                    flex-direction: column;
+                    margin: 25px;
+                }
+                .swiper-wrapper {
+                    .swiper-slide {
+                        background-position: center;
+                        background-size: cover;
+                        width: fit-content;
+                        opacity: .5;
+                        @media screen and (max-width: 768px) {
+                            width: 100%;
+                        }
+                        .slide {
+                            width: fit-content;
+                            @media screen and (max-width: 768px) {
+                                width: 100%;
+                            }
+                            img {
+                                width: fit-content;
+                                height: fit-content;
+                                object-fit: cover;
+                                box-shadow: 15px 15px 40px rgba($color: #000000, $alpha: .2);
+
+                                @media screen and (max-width: 768px) {
+                                    width: 100%;
+                                    height: 335px;
+                                    box-shadow: none;
+                                    margin-bottom: -4px;
+                                }
+                                @media screen and (min-width: 768px) and (max-width: 992px) {
+                                    width: 480px;
+                                    height: 325px;
+                                    margin-left: 30px;
+                                }
+                                @media screen and (min-width: 992px) and (max-width: 1024px) {
+                                    width: 630px;
+                                    height: 425px;
+                                    margin-left: 40px;
+                                }
+                            }
+                            .descriptionProject {
+                                max-width: 300px;
+                                max-height: 260px;
+                                background-color: #282828;
+                                position: absolute;
+                                top: 18%;
+                                left: -30%;
+                                padding: 30px 30px;
+                                @media screen and (max-width: 768px) {
+                                    position: initial;
+                                    height: fit-content;
+                                    max-width: 100%;
+                                    max-height: fit-content;
+                                    padding: 10px;
+                                }
+                                @media screen and (min-width: 768px) and (max-width: 992px) {
+                                    padding: 20px 15px;
+                                    width: 250px;
+                                    height: 210px;
+                                    top: 12%;
+                                    left: -19%;
+                                }
+                                @media screen and (min-width: 992px) and (max-width: 1024px) {
+                                    top: 16%;
+                                    left: -18%;
+                                    padding: 20px 30px;
+                                }
+                                h2 {
+                                    font-size: 2em;
+                                    color: #C39469;
+                                    letter-spacing: -1px;
+                                    margin: 0;
+                                    cursor: pointer;
+                                    @media screen and (max-width: 768px) {
+                                        font-size: 1.6em;
+                                        text-align: center;
+                                    }
+                                    @media screen and (min-width: 768px) and (max-width: 992px) {
+                                        font-size: 1.6em;
+                                    }
+                                    @media screen and (min-width: 992px) and (max-width: 1024px) {
+                                        font-size: 1.8em;
+                                    }
+                                }
+                                h2:hover {
+                                    color: white;
+                                }
+                                p {
+                                    font-size: 1.015em;
+                                    color: rgba($color: #FFFFFF, $alpha: .5);
+                                    line-height: 1.7em;
+                                    @media screen and (max-width: 768px) {
+                                        font-size: .91em;
+                                        text-align: center;
+                                    }
+                                    @media screen and (min-width: 768px) and (max-width: 992px) {
+                                        font-size: .93em;
+                                        line-height: 1.5em;
+                                    }
+                                }
+                            }
+                            .descriptionProject div {
+                                display: flex;
+                                flex-direction: row;
+                                gap: 20px;
+                                @media screen and (max-width: 768px) {
+                                    justify-content: center;
+                                }
+                                h3 {
+                                    color: rgba($color: #FFFFFF, $alpha: 1);
+                                    font-size: 1.05em;
+                                    font-weight: 400;
+                                    @media screen and (max-width: 768px) {
+                                        font-size: .9em;
+                                    }
+                                    @media screen and (min-width: 768px) and (max-width: 992px) {
+                                        font-size: .91em;
+                                    }
+                                }
+                                .swiperLine {
+                                    width: 1px;
+                                    background-color: rgba($color: #FFFFFF, $alpha: .3);
+                                    margin: 20px 0;
+                                }
+                            }
+                            .fa-solid {
+                                font-size: 1.1em;
+                                color: #FFFFFF;
+                                background-color: #C39469;
+                                padding: 23px;
+                                align-self: flex-end;
+                                bottom: 10.8%;
+                                position: absolute;
+                                bottom: 4px;
+                                right: 0;
+                                cursor: pointer;
+                                @media screen and (max-width: 768px) {
+                                    bottom: 35%;
+                                    font-size: .9em;
+                                    padding: 16px;
+                                }
+                            }
+                            .fa-solid:hover {
+                                color: rgba($color: #FFFFFF, $alpha: 1);
+                                background-color: #282828;
+                            }
+                        }
+                    }
+
+                    .swiper-slide-active {
+                        opacity: 1;
+                    }
+                    .swiper-slide .descriptionProject {
+                        display: none;
+                    }
+                    .swiper-slide-active .descriptionProject {
+                        display: block;
+                    }
+                }
+
+                .swiper-pagination {
+                    display: none;
+                    @media screen and (max-width: 768px) {
+                        display: block;
+                        position: relative;
+                        margin-top: 35px;
+                    }
+                }
+        
+                .sliderNav {
+                    display: flex;
+                    flex-direction: column;
+                    margin: auto 0;
+                    gap: 15px;
+                    position: absolute;
+                    right: 15%;
+                    top: 41%;
+                    z-index: 1;
+                    @media screen and (max-width: 768px) {
+                        display: none;
+                    }
+                    @media screen and (min-width: 768px) and (max-width: 992px) {
+                        right: 5%;
+                        top: 34%;
+                    }
+                    @media screen and (min-width: 992px) and (max-width: 1024px) {
+                        right: 4%;
+                        top: 38%;
+                    }
+                    .fa-solid {
+                        font-size: 1.1em;
+                        padding: 15px;
+                        border: 1.8px solid rgba($color: #000000, $alpha: .2);
+                        border-radius: 50%;
+                        color: rgba($color: #000000, $alpha: .7);
+                        cursor: pointer;
+                    }
+                    .fa-solid:hover {
+                        color: #C39469;
+                        border: 1.8px solid #C39469;
+                    }
+                }
+            }
+
+            &__slider  .swiper-pagination-bullet {
+                width: 12px;
+                height: 12px;
+                background-color: #C39469;
+            }
+
+            &__slider  .swiper-pagination-bullet:hover {
+                opacity: 1;
+            }
+        }
+
+        .blogPosts {
+            padding: 40px 20px 40px 20px;
+            &__h2 {
+                font-size: 2em;
+                text-align: center;
+                letter-spacing: 0;
+                margin-bottom: 20px;
+                @media screen and (max-width: 768px) {
+                    font-size: 1.7em;
+                }
+                @media screen and (min-width: 768px) and (max-width: 992px) {
+                    font-size: 1.8em;
+                }
+            }
+
+            &__h3 {
+                font-size: 1.015em;
+                color: #C4956A;
+                text-align: center;
+                font-weight: 700;
+                letter-spacing: 0;
+                margin-bottom: 0;
+            }
+
+            &__div {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                margin-top: 40px;
+                @media screen and (max-width: 576px) {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 10px;
+                }
+                @media screen and (min-width: 576px) and (max-width: 768px) {
+                    flex-wrap: wrap;
+                    gap: 20px;
+                }
+                @media screen and (min-width: 768px) and (max-width: 992px) {
+                    justify-content: center;
+                    gap: 30px;
+                }
+            }
+            &__div > div {
+                width: 270px;
+                @media screen and (max-width: 576px) {
+                    width: 250px;
+                }
+                @media screen and (min-width: 576px) and (max-width: 768px) {
+                    width: 240px;
+                }
+                @media screen and (min-width: 768px) and (max-width: 992px) {
+                    width: 210px;
+                }
+            }
+            &__div img {
+                cursor: pointer;
+                @media screen and (max-width: 576px) {
+                    width: 250px;
+                }
+                @media screen and (min-width: 576px) and (max-width: 768px) {
+                    width: 240px;
+                }
+                @media screen and (min-width: 768px) and (max-width: 992px) {
+                    width: 210px;
+                }
+            }
+            &__div h2 {
+                font-size: 1.9em;
+                font-weight: 700;
+                letter-spacing: 0;
+                opacity: .3;
+                margin: 0;
+                margin-bottom: 15px;
+                @media screen and (max-width: 576px) {
+                    font-size: 1.6em;
+                    text-align: center;
+                }
+                @media screen and (min-width: 576px) and (max-width: 768px) {
+                    font-size: 1.7em;
+                    text-align: center;
+                }
+                @media screen and (min-width: 768px) and (max-width: 992px) {
+                    font-size: 1.7em;
+                }
+            }
+            &__div h3 {
+                cursor: pointer;
+                margin-left: 0;
+                margin-right: 0;
+                @media screen and (max-width: 576px) {
+                    font-size: 1em;
+                    text-align: center;
+                }
+                @media screen and (min-width: 576px) and (max-width: 768px) {
+                    font-size: 1.1em;
+                    text-align: center;
+                }
+            }
+            &__div h3:hover {
+                color: #C39469;
+            }
+            &__div p {
+                font-size: .98em;
+                color: rgba($color: #000000, $alpha: .6);
+                line-height: 1.6em;
+                @media screen and (max-width: 768px) {
+                    font-size: .9em;
+                    text-align: center;
                 }
             }
         }
