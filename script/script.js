@@ -123,31 +123,45 @@ function changeWMList(index) {
         mwthodWorkText.innerHTML = text;
     }
 }
-/*
-import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
-      
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    effect: 'coverflow',
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: 'auto',
-    spaceBetween: 430,
-    coverflowEffect: {
-        rotate: 0,
-        modifier: 1,
-        scale: 1.08,
-        stretch: 0,
-        depth: 100,
-        slideShadows: false
-    },
-    loop: true,
 
-    // Navigation arrows
-    navigation: {
-        nextEl: '.fa-arrow-right',
-        prevEl: '.fa-arrow-left',
-    },
-});
+// Automatic SlideShows
+let clientSlideIndex = 0;
+autoShowSlides();
+
+function autoShowSlides() {
+  let i;
+  let slides = document.getElementsByClassName("diapo");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  clientSlideIndex++;
+  if (clientSlideIndex > slides.length) {clientSlideIndex = 1}
+  slides[clientSlideIndex-1].style.display = "block";
+  setTimeout(autoShowSlides, 4000); // Change image every 2 seconds
+}
+
+/*
+let clientSlideIndex = 1;
+showClientSlides(clientSlideIndex);
 */
+// Thumbnail image controls
+function clientCurrentSlide(n) {
+    showClientSlides(clientSlideIndex = n);
+}
+
+function showClientSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("diapo");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {clientSlideIndex = 1}
+    if (n < 1) {clientSlideIndex = slides.length}
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[clientSlideIndex-1].style.display = "block";
+    dots[clientSlideIndex-1].className += " active";
+}
