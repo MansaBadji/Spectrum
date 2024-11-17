@@ -360,10 +360,11 @@ body {
     }
 
     main {
-        .expertise {
+        .expertise,
+        .contactUs {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            margin: 80px 20px 80px 20px;
+            margin: 80px 20px;
             background-color: #FFFFFF;
             @media screen and (max-width: 576px) {
                 display: block;
@@ -385,7 +386,8 @@ body {
                 }
             }
 
-            &__presentation {
+            &__presentation,
+            &__img-deco {
                 display: flex;
                 flex-direction: column;
                 gap: 25px;
@@ -485,15 +487,18 @@ body {
                 }
             }
 
-            &__contactForm {
+            &__contactForm,
+            &__form {
                 position: absolute;
                 width: 35%;
                 left: 50%;
+                /*
                 @media screen and (max-width: 576px) {
                     width: 100%;
                     position: initial;
                 }
-                @media screen and (min-width: 576px) and (max-width: 768px) {
+                    */
+                @media screen and (max-width: 768px) {
                     width: 100%;
                     position: initial;
                 }
@@ -527,7 +532,7 @@ body {
                     }
                 }
                 h3 {
-                    font-size: 1.04em;
+                    font-size: 1.02em;
                     color: #C4956A;
                     @media screen and (max-width: 576px) {
                         margin-top: 15px;
@@ -542,7 +547,7 @@ body {
                     display: flex;
                     flex-direction: column;
                     gap: 20px;
-                    padding: 40px;
+                    padding: 50px 40px;
                     background-color: #292929;
                     border-radius: 8px;
                     margin-top: 45px;
@@ -584,6 +589,49 @@ body {
                             width: 120px;
                             height: 40px;
                         }
+                    }
+                }
+            }
+        }
+        .contactUs {
+            margin: 0 20px 150px 20px;
+            @media screen and (max-width: 576px) {
+                margin-bottom: 50px;
+            }
+            @media screen and (min-width: 576px) and (max-width: 768px) {
+                margin: 0 30px 50px 30px;
+            }
+            @media screen and (min-width: 768px) and (max-width: 992px) {
+                margin-bottom: 30px;
+            }
+            
+            &__img-deco {
+                margin: 0;
+                @media screen and (max-width: 992px) {
+                    display: none;
+                }
+                @media screen and (min-width: 992px) and (max-width: 1024px) {
+                    width: 438px;
+                    height: 594px;
+                }
+            }
+
+            &__form {
+                margin-top: 80px;
+                @media screen and (max-width: 768px) {
+                    margin-top: 60px;
+                }
+                @media screen and (min-width: 768px) and (max-width: 992px) {
+                    left: 18%;
+                    margin-top: 60px;
+                }
+                form {
+                    @media screen and (min-width: 576px) and (max-width: 768px) {
+                        padding: 30px 35px;
+                    }
+                    @media screen and (min-width: 768px) and (max-width: 992px) {
+                        width: 100%;
+                        padding: 30px 35px;
                     }
                 }
             }
