@@ -165,3 +165,12 @@ function showClientSlides(n) {
     slides[clientSlideIndex-1].style.display = "block";
     dots[clientSlideIndex-1].className += " active";
 }
+
+
+// Header Menu hamburger
+const hamMenu = document.querySelector(".logoMenu__menu");
+const offScreenMenu = document.querySelector(".off-screen-menu");
+hamMenu.addEventListener('click', () => {
+    hamMenu.classList.toggle('active');
+    offScreenMenu.classList.toggle('active');
+});
