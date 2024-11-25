@@ -12,6 +12,7 @@ body {
     font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 
     header {
+        height: fit-content;
         .presentation {
             display: grid;
             grid-template-columns: 30% 70%;
@@ -27,9 +28,6 @@ body {
             }
             @media screen and (min-width: 768px) and (max-width: 992px) {
                 grid-template-columns: 35% 65%;
-            }
-            @media screen and (min-width: 1024px) and (max-width: 1281px) {
-                
             }
             .logoMenu {
                 display: flex;
@@ -55,6 +53,7 @@ body {
                     padding-top: 5px;
                     padding-bottom: 5px;
                     box-shadow: 6px 0px 25px black;
+                    position: sticky;
                     top: 0;
                 }
 
@@ -244,8 +243,117 @@ body {
                 }
             }
         }
-        
 
+        .off-screen-menu {
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            font-size: .8em;
+            letter-spacing: 0em;
+            font-weight: 700;
+            gap: 40px;
+            align-items: center;
+            background-color: white;
+            position: absolute;
+            top: -120px;
+            left: 30%;
+            padding: 35px 20px;
+            z-index: 10;
+            max-height: 120px;
+            transition: .3s ease;
+            @media screen and (max-width: 768px) {
+                top: 60px;
+                left: -50%;
+                width: 50%;
+                height: 100%;
+                max-height: 100%;
+                padding: 0;
+            }
+            @media screen and (min-width: 768px) and (max-width: 992px) {
+                top: 60px;
+                left: -30%;
+                width: 30%;
+                height: 100%;
+                max-height: 100%;
+                padding: 0;
+            }
+            @media screen and (min-width: 992px) and (max-width: 1024px) {
+                top: 60px;
+                left: -27.5%;
+                width: 27.5%;
+                height: 100%;
+                max-height: 100%;
+                padding: 0;
+            }
+            @media screen and (max-width: 1024px) {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+                width: 100%;
+                height: 100%;
+                font-size: .9em;
+                font-weight: 400;
+                padding: 0;
+            }
+        }
+        .off-screen-menu.active {
+            top: 0;
+            @media screen and (max-width: 1024px) {
+                top: 60px;
+                left: 0;
+            }
+        }
+        .off-screen-menu .home-menu {
+            color: #C39469;
+            @media screen and (max-width: 1024px) {
+                color: #FFFFFF;
+                background-color: #C39469;
+            }
+        }
+        .off-screen-menu a {
+            text-decoration: none;
+            color: #000000;
+            cursor: pointer;
+            @media screen and (max-width: 768px) {
+                margin: 0;
+                max-width: 92.2%;
+                width: 100%;
+                padding: 10px;
+                margin-left: 1px;
+            }
+            @media screen and (min-width: 768px) and (max-width: 992px) {
+                margin: 0;
+                max-width: 90.8%;
+                width: 100%;
+                padding: 10px;
+                margin-left: 1px;
+            }
+            @media screen and (min-width: 992px) and (max-width: 1024px) {
+                margin: 0;
+                max-width: 92.3%;
+                width: 100%;
+                padding: 10px;
+                margin-left: 1px;
+            }
+        }
+        .off-screen-menu a:hover {
+            color: #C39469;
+            @media screen and (max-width: 992px) {
+                color: #FFFFFF;
+                background-color: #C4956A;
+            }
+        }
+        .off-screen-menu span {
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+        .off-screen-menu .fa-solid {
+            font-size: 1.4em;
+            opacity: .4;
+            margin-right: 10px;
+        }
+        
+        /*
         .off-screen-menu {
             background-color: white;
             position: absolute;
@@ -354,7 +462,7 @@ body {
             opacity: .4;
             margin-right: 10px;
         }
-
+        */
         .sliderNav {
             display: grid;
             grid-template-columns: 30% 70%;

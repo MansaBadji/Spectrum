@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spectrum</title>
     
@@ -17,7 +17,7 @@
     <script src="script/script.js" defer></script>
 </head>
 <body>
-    <header>
+    <header id="header">
         <div class="presentation">
             <div class="logoMenu">
                 <img class="logoMenu__logo" src="images/logo.png">
@@ -46,6 +46,18 @@
         </div>
         
         <div class="off-screen-menu">
+            <a href="#header" class="home-menu">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#team">TEAM</a>
+            <a href="#portfolio">PORTFOLIO</a>
+            <a href="#contact">CONTACTS</a>
+            <a href="">
+                <i class="fa-solid fa-mobile-screen"></i>
+                <span>1-300-123-1234</span>
+            </a>
+        </div>
+        <!--
+        <div class="off-screen-menu">
             <ul>
                 <li class="home-menu">HOME</li>
                 <li>ABOUT</li>
@@ -58,7 +70,7 @@
                 </li>
             </ul>
         </div>
-        
+        -->
         <div class="sliderNav">
             <div class="sliderNav__arrow">
                 <div>
@@ -86,7 +98,7 @@
     </header>
 
     <main>
-        <section class="expertise">
+        <section class="expertise" id="about">
             <div class="expertise__index-bg">
                 <img src="images/index-7.png" alt="Croqui d'une maison">
             </div>
@@ -147,7 +159,7 @@
             </div>
         </section>
         
-        <section class="ourTeam">
+        <section class="ourTeam" id="team">
             <h2 class="ourTeam__title">OUR TEAM</h2>
             <h3 class="ourTeam__subTitle">PEOPLE BEHIND OUR SUCCESS</h3>
             <div class="ourTeam__details">
@@ -259,7 +271,7 @@
             </div>
         </section>
 
-        <section class="projects">
+        <section class="projects" id="portfolio">
             <div class="projects__head">
                 <h2>PRO<span>JECTS</span></h2>
                 <p>Below you can take a look at our featured and recent projects that have been numerously awarded for our unique architectural approach.</p>
@@ -438,7 +450,7 @@
             </div>
         </section>
         
-        <section class="contactUs">
+        <section class="contactUs" id="contact">
             <div class="contactUs__index-bg">
                 <img src="images/index-9.png" alt="Croquis d'une maison">
             </div>
